@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<livraria>
+    <livro id="L01" ano="1997">
+        <autor>
+            <nome>Marie</nome>
+            <sobrenome>Buretta</sobrenome>
+        </autor>
+        <titulo>Data Replication</titulo>
+        <editora>Wiley</editora>
+    </livro>
+    <livro id="L02" ano="2000">
+        <autor>
+            <nome>Ramez</nome>
+            <sobrenome>Elmasri</sobrenome>
+        </autor>
+        <autor>
+            <nome>Shamkant</nome>
+            <sobrenome>Navathe</sobrenome>
+        </autor>
+        <titulo>Fundamentals of Database Systems</titulo>
+        <editora>Addison Wesley</editora>
+    </livro>
+</livraria>
