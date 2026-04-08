@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE quiz [
+    <!ELEMENT quiz (disciplina, professor, turma, data, questões)>
+    <!ATTLIST quiz versao CDATA #REQUIRED>
+
+    <!ELEMENT disciplina (#PCDATA)>
+
+    <!ELEMENT professor (nome, matrícula?)>
+    <!ELEMENT nome (#PCDATA)>
+    <!ELEMENT matrícula (#PCDATA)>
+
+    <!ELEMENT turma (#PCDATA)>
+    <!ELEMENT data (#PCDATA)>
+
+    <!ELEMENT questões (questão+)>
+    <!ELEMENT questão (enunciado, pontuação, alternativas)>
+    <!ELEMENT enunciado (#PCDATA)>
+    <!ELEMENT pontuação (#PCDATA)>
+
+    <!ELEMENT alternativas (alternativa+)>
+    <!ELEMENT alternativa (#PCDATA)>
+    <!ATTLIST alternativa correta (sim|nao) #REQUIRED>
+]>
+
+<quiz versao="1.0">
+
+    <disciplina>Informática</disciplina>
+
+    <professor>
+        <nome>João Pereira</nome>
+        <matrícula>12345</matrícula>
+    </professor>
+
+    <turma>3º Ano A</turma>
+    <data>08/04/2026</data>
+
+    <questões>
+
+        <questão>
+            <enunciado>Qual linguagem é usada para estruturar páginas web?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="sim">HTML</alternativa>
+                <alternativa correta="nao">Python</alternativa>
+                <alternativa correta="nao">Java</alternativa>
+                <alternativa correta="nao">C++</alternativa>
+            </alternativas>
+        </questão>
+
+        <questão>
+            <enunciado>Qual é a capital do Brasil?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="nao">Rio de Janeiro</alternativa>
+                <alternativa correta="nao">São Paulo</alternativa>
+                <alternativa correta="sim">Brasília</alternativa>
+                <alternativa correta="nao">Salvador</alternativa>
+            </alternativas>
+        </questão>
+
+        <questão>
+            <enunciado>Quanto é 5 x 5?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="nao">20</alternativa>
+                <alternativa correta="nao">15</alternativa>
+                <alternativa correta="sim">25</alternativa>
+                <alternativa correta="nao">30</alternativa>
+            </alternativas>
+        </questão>
+
+        <questão>
+            <enunciado>Qual planeta é conhecido como planeta vermelho?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="nao">Terra</alternativa>
+                <alternativa correta="sim">Marte</alternativa>
+                <alternativa correta="nao">Júpiter</alternativa>
+                <alternativa correta="nao">Saturno</alternativa>
+            </alternativas>
+        </questão>
+
+        <questão>
+            <enunciado>Qual é o maior oceano do mundo?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="nao">Atlântico</alternativa>
+                <alternativa correta="sim">Pacífico</alternativa>
+                <alternativa correta="nao">Índico</alternativa>
+                <alternativa correta="nao">Ártico</alternativa>
+            </alternativas>
+        </questão>
+
+    </questões>
+
+</quiz>
