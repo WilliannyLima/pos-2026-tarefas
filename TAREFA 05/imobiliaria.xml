@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE imobiliaria [
+    <!ELEMENT imobiliaria (imovel+)>
+
+    <!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas)>
+    <!ATTLIST imovel id ID #REQUIRED>
+
+    <!ELEMENT descricao (#PCDATA)>
+
+    <!ELEMENT proprietario (nome, (email | telefone)+)>
+    <!ELEMENT nome (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT telefone (#PCDATA)>
+
+    <!ELEMENT endereco (rua, bairro, cidade, numero?)>
+    <!ELEMENT rua (#PCDATA)>
+    <!ELEMENT bairro (#PCDATA)>
+    <!ELEMENT cidade (#PCDATA)>
+    <!ELEMENT numero (#PCDATA)>
+
+    <!ELEMENT caracteristicas (tamanho, numQuartos, numBanheiros)>
+    <!ELEMENT tamanho (#PCDATA)>
+    <!ELEMENT numQuartos (#PCDATA)>
+    <!ELEMENT numBanheiros (#PCDATA)>
+
+    <!ELEMENT valor (#PCDATA)>
+]>
+<imobiliaria>
+    <imovel id="I1">
+        <descricao>Kit Net no Centro</descricao>
+        <proprietario>
+            <nome>Adailza da Silva</nome>
+            <telefone>84994796722</telefone>
+            <telefone>84991707095</telefone>
+            <email>adailza.09@gmail.com</email>
+        </proprietario>
+        <endereco>
+            <rua>Rua Doutor Velho</rua>
+            <bairro>Centro</bairro>
+            <cidade>Sao Tome</cidade>
+            <numero>263A</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>40m²</tamanho>
+            <numQuartos>01</numQuartos>
+            <numBanheiros>01</numBanheiros>
+        </caracteristicas>
+    </imovel>
+    <imovel id="I2">
+        <descricao>Casa com area no centro</descricao>
+        <proprietario>
+            <nome>Ana Paula dos Santos</nome>
+            <telefone>84992504010</telefone>
+            <email>anapaulas@gmail.com</email>
+        </proprietario>
+        <endereco>
+            <rua>Rua Professora Josefa Ortense</rua>
+            <bairro>Centro</bairro>
+            <cidade>Senador Eloi de Souza</cidade>
+            <numero>S/N</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>80m²</tamanho>
+            <numQuartos>03</numQuartos>
+            <numBanheiros>02</numBanheiros>
+        </caracteristicas>
+    </imovel>
+    <imovel id="I3">
+        <descricao>Casa murada com quintal no centro</descricao>
+        <proprietario>
+            <nome>Maria Eliane</nome>
+            <telefone>84987269725</telefone>
+            <email>mariaeliane085@hotmail.com</email>
+        </proprietario>
+        <endereco>
+            <rua>Rua Jose Padre</rua>
+            <bairro>Centro</bairro>
+            <cidade>Senador Eloi de Souza</cidade>
+            <numero>06</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>85m²</tamanho>
+            <numQuartos>02</numQuartos>
+            <numBanheiros>01</numBanheiros>
+        </caracteristicas>
+    </imovel>
+    <imovel id="I4">
+        <descricao>Casa com area de servico, piscina no centro</descricao>
+        <proprietario>
+            <nome>Marli Maia</nome>
+            <telefone>84995612350</telefone>
+            <email>marli.maia@gmail.com</email>
+        </proprietario>
+        <endereco>
+            <rua>Rua Manoel Cesario de Araujo</rua>
+            <bairro>Centro</bairro>
+            <cidade>Sao Paulo do Potengi</cidade>
+            <numero>208</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>106m²</tamanho>
+            <numQuartos>03</numQuartos>
+            <numBanheiros>05</numBanheiros>
+        </caracteristicas>
+    </imovel>
+    <imovel id="I5">
+        <descricao>Pousada Almeida no Centro</descricao>
+        <proprietario>
+            <nome>Geralda Miguel de Almeida</nome>
+            <telefone>84991707095</telefone>
+            <email>geroalmeida@icloud.com</email>
+        </proprietario>
+        <endereco>
+            <rua>Rua Barao do Rio Branco</rua>
+            <bairro>Centro</bairro>
+            <cidade>Sao Tome</cidade> 
+            <numero>165</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>75m²</tamanho>
+            <numQuartos>05</numQuartos>
+            <numBanheiros>04</numBanheiros>
+        </caracteristicas>
+    </imovel>
+</imobiliaria>
