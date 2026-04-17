@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cardapio>
+    <prato id="p1">
+        <nome>Macarronada</nome>
+        <descricao>Macarrao ao molho de tomate com calabresa.</descricao>
+        <ingredientes>
+            <ingrediente>macarrao</ingrediente>
+            <ingrediente>molho de tomate</ingrediente>
+            <ingrediente>calabresa</ingrediente>
+            <ingrediente>cebola</ingrediente>
+            <ingrediente>manteiga</ingrediente>
+            <ingrediente>creme de leite</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">25.00</preco>
+        <calorias>270</calorias>
+        <tempoPreparo>30 min</tempoPreparo>
+   </prato>
+   <prato id="p2">
+        <nome>File a parmegiana</nome>
+        <descricao>File empanado com molho de tomate e queijo.</descricao>
+        <ingredientes>
+            <ingrediente>file de carne</ingrediente>
+            <ingrediente>farinha de rosca</ingrediente>
+            <ingrediente>ovos</ingrediente>
+            <ingrediente>molho de tomate</ingrediente>
+            <ingrediente>queijo</ingrediente>
+            <ingrediente>oleo</ingrediente>
+            <ingrediente>cebola</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">35.00</preco>
+        <calorias>600</calorias>
+        <tempoPreparo>30 a 55 min</tempoPreparo>
+   </prato>
+   <prato id="p3">
+        <nome>Cuscuz</nome>
+        <descricao>Cuscuz nordestino feito com farinha de milho.</descricao>
+        <ingredientes>
+            <ingrediente>flocao de milho</ingrediente>
+            <ingrediente>agua</ingrediente>
+            <ingrediente>sal</ingrediente>
+            <ingrediente>manteiga</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">5.00</preco>
+        <calorias>112</calorias>
+        <tempoPreparo>15 min</tempoPreparo>
+   </prato>
+   <prato id="p4">
+        <nome>Arroz de leite</nome>
+        <descricao>Arroz branco cozido com leite e manteiga.</descricao>
+        <ingredientes>
+            <ingrediente>arroz branco</ingrediente>
+            <ingrediente>leite</ingrediente>
+            <ingrediente>manteiga</ingrediente>
+            <ingrediente>sal</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">10.00</preco>
+        <calorias>270</calorias>
+        <tempoPreparo>40 min</tempoPreparo>
+   </prato>
+   <prato id="p5">
+        <nome>Lasanha</nome>
+        <descricao>Lasanha de carne com camadas de macarrao, molho de tomate e queijo.</descricao>
+        <ingredientes>
+            <ingrediente>massa de macarrao</ingrediente>
+            <ingrediente>carne moida</ingrediente>
+            <ingrediente>molho de tomate</ingrediente>
+            <ingrediente>queijo</ingrediente>
+            <ingrediente>presunto</ingrediente>
+            <ingrediente>cebola</ingrediente>
+            <ingrediente>manteiga</ingrediente>
+            <ingrediente>temperos</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">45.00</preco>
+        <calorias>163</calorias>
+        <tempoPreparo>45 min</tempoPreparo>
+   </prato>
+</cardapio>
