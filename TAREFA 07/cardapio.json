@@ -1,0 +1,110 @@
+{
+  "cardapio": {
+    "prato": [
+      {
+        "id": 1,
+        "nome": "Macarronada",
+        "descricao": "Macarrao ao molho de tomate com calabresa.",
+        "ingredientes": {
+          "ingrediente": [
+            "macarrao",
+            "molho de tomate",
+            "calabresa",
+            "cebola",
+            "manteiga",
+            "creme de leite"
+          ]
+        },
+        "preco": {
+          "moeda": "BRL",
+          "valor": 25.00
+        },
+        "calorias": 270,
+        "tempoPreparo": "30 min"
+      },
+      {
+        "id": 2,
+        "nome": "File a parmegiana",
+        "descricao": "File empanado com molho de tomate e queijo.",
+        "ingredientes": {
+          "ingrediente": [
+            "file de carne",
+            "farinha de rosca",
+            "ovos",
+            "molho de tomate",
+            "queijo",
+            "oleo",
+            "cebola"
+          ]
+        },
+        "preco": {
+          "moeda": "BRL",
+          "valor": 35.00
+        },
+        "calorias": 600,
+        "tempoPreparo": "30 a 55 min"
+      },
+      {
+        "id": 3,
+        "nome": "Cuscuz",
+        "descricao": "Cuscuz nordestino feito com farinha de milho.",
+        "ingredientes": {
+          "ingrediente": [
+            "flocao de milho",
+            "agua",
+            "sal",
+            "manteiga"
+          ]
+        },
+        "preco": {
+          "moeda": "BRL",
+          "valor": 5.00
+        },
+        "calorias": 112,
+        "tempoPreparo": "15 min"
+      },
+      {
+        "id": 4,
+        "nome": "Arroz de leite",
+        "descricao": "Arroz branco cozido com leite e manteiga.",
+        "ingredientes": {
+          "ingrediente": [
+            "arroz branco",
+            "leite",
+            "manteiga",
+            "sal"
+          ]
+        },
+        "preco": {
+          "moeda": "BRL",
+          "valor": 10.00
+        },
+        "calorias": 270,
+        "tempoPreparo": "40 min"
+      },
+      {
+        "id": 5,
+        "nome": "Lasanha",
+        "descricao": "Lasanha de carne com camadas de macarrao, molho de tomate e queijo.",
+        "ingredientes": {
+          "ingrediente": [
+            "massa de macarrao",
+            "carne moida",
+            "molho de tomate",
+            "queijo",
+            "presunto",
+            "cebola",
+            "manteiga",
+            "temperos"
+          ]
+        },
+        "preco": {
+          "moeda": "BRL",
+          "valor": 45.00
+        },
+        "calorias": 163,
+        "tempoPreparo": "45 min"
+      }
+    ]
+  }
+}

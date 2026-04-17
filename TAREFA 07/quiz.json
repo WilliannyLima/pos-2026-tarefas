@@ -1,0 +1,64 @@
+{
+  "quiz": {
+    "versao": "1.0",
+    "disciplina": "Informática",
+    "professor": {
+      "nome": "João Pereira",
+      "matricula": "12345"
+    },
+    "turma": "3º Ano A",
+    "data": "08/04/2026",
+    "questoes": [
+      {
+        "enunciado": "Qual linguagem é usada para estruturar páginas web?",
+        "pontuacao": 1,
+        "alternativas": [
+          { "texto": "HTML", "correta": "sim" },
+          { "texto": "Python", "correta": "nao" },
+          { "texto": "Java", "correta": "nao" },
+          { "texto": "C++", "correta": "nao" }
+        ]
+      },
+      {
+        "enunciado": "Qual é a capital do Brasil?",
+        "pontuacao": 1,
+        "alternativas": [
+          { "texto": "Rio de Janeiro", "correta": "nao" },
+          { "texto": "São Paulo", "correta": "nao" },
+          { "texto": "Brasília", "correta": "sim" },
+          { "texto": "Salvador", "correta": "nao" }
+        ]
+      },
+      {
+        "enunciado": "Quanto é 5 x 5?",
+        "pontuacao": 1,
+        "alternativas": [
+          { "texto": "20", "correta": "nao" },
+          { "texto": "15", "correta": "nao" },
+          { "texto": "25", "correta": "sim" },
+          { "texto": "30", "correta": "nao" }
+        ]
+      },
+      {
+        "enunciado": "Qual planeta é conhecido como planeta vermelho?",
+        "pontuacao": 1,
+        "alternativas": [
+          { "texto": "Terra", "correta": "nao" },
+          { "texto": "Marte", "correta": "sim" },
+          { "texto": "Júpiter", "correta": "nao" },
+          { "texto": "Saturno", "correta": "nao" }
+        ]
+      },
+      {
+        "enunciado": "Qual é o maior oceano do mundo?",
+        "pontuacao": 1,
+        "alternativas": [
+          { "texto": "Atlântico", "correta": "nao" },
+          { "texto": "Pacífico", "correta": "sim" },
+          { "texto": "Índico", "correta": "nao" },
+          { "texto": "Ártico", "correta": "nao" }
+        ]
+      }
+    ]
+  }
+}
