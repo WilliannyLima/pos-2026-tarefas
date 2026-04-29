@@ -8,7 +8,7 @@
 
     <!ELEMENT descricao (#PCDATA)>
 
-    <!ELEMENT proprietario (nome, (email | telefone)+)>
+    <!ELEMENT proprietario (nome, telefone+, email?)>
     <!ELEMENT nome (#PCDATA)>
     <!ELEMENT email (#PCDATA)>
     <!ELEMENT telefone (#PCDATA)>
