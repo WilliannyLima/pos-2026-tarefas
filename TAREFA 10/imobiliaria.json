@@ -1,0 +1,125 @@
+{
+    "imovel": [
+        {
+            "id": "I1",
+            "descricao": "Kit Net no Centro",
+            "proprietario": {
+                "nome": "Adailza da Silva",
+                "emails": [
+                    "adailza.09@gmail.com"
+                ],
+                "telefones": [
+                    "84994796722",
+                    "84991707095"
+                ]
+            },
+            "endereco": {
+                "rua": "Rua Doutor Velho",
+                "bairro": "Centro",
+                "cidade": "Sao Tome",
+                "numero": "263A"
+            },
+            "caracteristicas": {
+                "tamanho": "40m²",
+                "numQuartos": "01",
+                "numBanheiros": "01"
+            }
+        },
+        {
+            "id": "I2",
+            "descricao": "Casa com area no centro",
+            "proprietario": {
+                "nome": "Ana Paula dos Santos",
+                "emails": [
+                    "anapaulas@gmail.com"
+                ],
+                "telefones": [
+                    "84992504010"
+                ]
+            },
+            "endereco": {
+                "rua": "Rua Professora Josefa Ortense",
+                "bairro": "Centro",
+                "cidade": "Senador Eloi de Souza",
+                "numero": "S/N"
+            },
+            "caracteristicas": {
+                "tamanho": "80m²",
+                "numQuartos": "03",
+                "numBanheiros": "02"
+            }
+        },
+        {
+            "id": "I3",
+            "descricao": "Casa murada com quintal no centro",
+            "proprietario": {
+                "nome": "Maria Eliane",
+                "emails": [
+                    "mariaeliane085@hotmail.com"
+                ],
+                "telefones": [
+                    "84987269725"
+                ]
+            },
+            "endereco": {
+                "rua": "Rua Jose Padre",
+                "bairro": "Centro",
+                "cidade": "Senador Eloi de Souza",
+                "numero": "06"
+            },
+            "caracteristicas": {
+                "tamanho": "85m²",
+                "numQuartos": "02",
+                "numBanheiros": "01"
+            }
+        },
+        {
+            "id": "I4",
+            "descricao": "Casa com area de servico, piscina no centro",
+            "proprietario": {
+                "nome": "Marli Maia",
+                "emails": [
+                    "marli.maia@gmail.com"
+                ],
+                "telefones": [
+                    "84995612350"
+                ]
+            },
+            "endereco": {
+                "rua": "Rua Manoel Cesario de Araujo",
+                "bairro": "Centro",
+                "cidade": "Sao Paulo do Potengi",
+                "numero": "208"
+            },
+            "caracteristicas": {
+                "tamanho": "106m²",
+                "numQuartos": "03",
+                "numBanheiros": "05"
+            }
+        },
+        {
+            "id": "I5",
+            "descricao": "Pousada Almeida no Centro",
+            "proprietario": {
+                "nome": "Geralda Miguel de Almeida",
+                "emails": [
+                    "geroalmeida@icloud.com"
+                ],
+                "telefones": [
+                    "84991707095"
+                ]
+            },
+            "endereco": {
+                "rua": "Rua Barao do Rio Branco",
+                "bairro": "Centro",
+                "cidade": "Sao Tome",
+                "numero": "165"
+            },
+            "caracteristicas": {
+                "tamanho": "75m²",
+                "numQuartos": "05",
+                "numBanheiros": "04"
+            }
+        }
+    ]
+}

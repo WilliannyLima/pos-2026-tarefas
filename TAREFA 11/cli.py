@@ -1,64 +1,110 @@
 import users_wrapper as users
 
 while True:
-    print("\n=== CRUD USERS ===")
-    print("1 - Listar usuários")
-    print("2 - Ler usuário")
-    print("3 - Criar usuário")
-    print("4 - Atualizar usuário")
-    print("5 - Deletar usuário")
+
+    print("\n===== MENU =====")
+    print("1 - Listar clientes")
+    print("2 - Buscar cliente")
+    print("3 - Criar cliente")
+    print("4 - Atualizar cliente")
+    print("5 - Deletar cliente")
     print("0 - Sair")
 
-    opcao = input("Escolha: ")
+    opcao = input("Escolha uma opção: ")
 
+    # LISTAR
     if opcao == "1":
-        lista = users.list()
+        try:
+            clientes = users.list()
 
-        for user in lista:
-            print(f"{user['id']} - {user['name']}")
+            if clientes:
+                print(f"\n--- {len(clientes)} clientes encontrados ---")
 
+                for cliente in clientes:
+                    print(
+                        f"ID: {cliente.get('id')} | "
+                        f"Nome: {cliente.get('nome')} | "
+                        f"Email: {cliente.get('email')} | "
+                        f"Telefone: {cliente.get('telefone', 'N/A')}"
+                    )
+            else:
+                print("Nenhum cliente encontrado.")
+
+        except Exception as e:
+            print(f"Erro: {e}")
+
+    # BUSCAR
     elif opcao == "2":
-        user_id = input("ID do usuário: ")
+        try:
+            cliente_id = input("ID do cliente: ")
 
-        user = users.read(user_id)
+            cliente = users.read(cliente_id)
 
-        print(user)
+            if cliente:
+                print("\n--- Cliente encontrado ---")
+                print(f"ID: {cliente.get('id')}")
+                print(f"Nome: {cliente.get('nome')}")
+                print(f"Email: {cliente.get('email')}")
+                print(f"Telefone: {cliente.get('telefone', 'N/A')}")
+            else:
+                print("Cliente não encontrado.")
 
+        except Exception as e:
+            print(f"Erro: {e}")
+
+    # CRIAR
     elif opcao == "3":
-        nome = input("Nome: ")
-        email = input("Email: ")
+        try:
+            nome = input("Nome: ")
+            email = input("Email: ")
+            telefone = input("Telefone: ")
 
-        novo_usuario = {
-            "name": nome,
-            "email": email
-        }
+            dados = {
+                "nome": nome,
+                "email": email,
+                "telefone": telefone
+            }
 
-        resultado = users.create(novo_usuario)
+            resultado = users.create(dados)
 
-        print(resultado)
+            print("\nCliente criado com sucesso!")
+            print(resultado)
 
+        except Exception as e:
+            print(f"Erro: {e}")
+
+    # ATUALIZAR
     elif opcao == "4":
-        user_id = input("ID do usuário: ")
+        try:
+            cliente_id = input("ID do cliente: ")
 
-        nome = input("Novo nome: ")
-        email = input("Novo email: ")
+            dados = {
+                "nome": input("Novo nome: "),
+                "email": input("Novo email: "),
+                "telefone": input("Novo telefone: ")
+            }
 
-        dados = {
-            "name": nome,
-            "email": email
-        }
+            resultado = users.update(cliente_id, dados)
 
-        resultado = users.update(user_id, dados)
+            print("\nCliente atualizado!")
+            print(resultado)
 
-        print(resultado)
+        except Exception as e:
+            print(f"Erro: {e}")
 
+    # DELETAR
     elif opcao == "5":
-        user_id = input("ID do usuário: ")
+        try:
+            cliente_id = input("ID do cliente: ")
 
-        resultado = users.delete(user_id)
+            resultado = users.delete(cliente_id)
 
-        print(resultado)
+            print(resultado)
 
+        except Exception as e:
+            print(f"Erro: {e}")
+
+    # SAIR
     elif opcao == "0":
         print("Encerrando...")
         break
