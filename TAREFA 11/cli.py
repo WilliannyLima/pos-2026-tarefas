@@ -12,7 +12,6 @@ while True:
 
     opcao = input("Escolha uma opção: ")
 
-    # LISTAR
     if opcao == "1":
         try:
             clientes = users.list()
@@ -33,7 +32,7 @@ while True:
         except Exception as e:
             print(f"Erro: {e}")
 
-    # BUSCAR
+ 
     elif opcao == "2":
         try:
             cliente_id = input("ID do cliente: ")
@@ -52,7 +51,7 @@ while True:
         except Exception as e:
             print(f"Erro: {e}")
 
-    # CRIAR
+  
     elif opcao == "3":
         try:
             nome = input("Nome: ")
@@ -73,7 +72,7 @@ while True:
         except Exception as e:
             print(f"Erro: {e}")
 
-    # ATUALIZAR
+  
     elif opcao == "4":
         try:
             cliente_id = input("ID do cliente: ")
@@ -92,7 +91,7 @@ while True:
         except Exception as e:
             print(f"Erro: {e}")
 
-    # DELETAR
+    
     elif opcao == "5":
         try:
             cliente_id = input("ID do cliente: ")
@@ -104,7 +103,7 @@ while True:
         except Exception as e:
             print(f"Erro: {e}")
 
-    # SAIR
+
     elif opcao == "0":
         print("Encerrando...")
         break
