@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}Boletim{% endblock %}
+
+{% block content %}
+
+<div class="card shadow p-4">
+
+    <h3>📚 Boletim Escolar</h3>
+
+    <!-- FORM ANO + PERÍODO -->
+    <form method="GET" class="row g-2 mb-3">
+
+        <div class="col-md-4">
+            <label>Selecione o ano</label>
+            <select name="ano" class="form-control">
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+            </select>
+        </div>
+
+        <div class="col-md-4">
+            <label>Período letivo</label>
+            <select name="periodo" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <div class="col-md-4 d-flex align-items-end">
+            <button class="btn btn-primary w-100">Consultar</button>
+        </div>
+
+    </form>
+
+    <table class="table table-striped mt-3">
+
+        <thead class="table-dark">
+            <tr>
+                <th>Disciplina</th>
+                <th>Média</th>
+                <th>Faltas</th>
+                <th>Situação</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% if boletim %}
+
+            {% for d in boletim %}
+            <tr>
+                <td>{{ d['disciplina'] }}</td>
+                <td>{{ d['media_disciplina'] }}</td>
+                <td>{{ d['numero_faltas'] }}</td>
+                <td>{{ d['situacao'] }}</td>
+            </tr>
+            {% endfor %}
+
+        {% else %}
+
+            <tr>
+                <td colspan="4" class="text-center">
+                    Nenhum boletim encontrado.
+                </td>
+            </tr>
+
+        {% endif %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}
