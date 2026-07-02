@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SUAP Flask{% endblock %}</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen font-sans">
+
+    <nav class="bg-emerald-700 text-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="{{ url_for('index') }}" class="text-xl font-bold tracking-wide flex items-center gap-2">
+                 SUAP BB
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="{{ url_for('index') }}" class="hover:text-emerald-200 transition">INÍCIO</a>
+                {% if session.get('suap_token') %}
+                    <a href="{{ url_for('boletim') }}" class="hover:text-emerald-200 transition">MEU BOLETIM</a>
+                    <a href="{{ url_for('index') }}" class="hover:text-emerald-200 transition font-semibold">
+                        MEU PERFIL
+                    </a>
+                    <a href="{{ url_for('logout') }}" class="bg-red-600 hover:bg-red-700 px-3 py-1.5 rounded text-sm font-medium transition">
+                        SAIR
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('login') }}" class="bg-emerald-600 hover:bg-emerald-500 px-4 py-1.5 rounded font-medium transition">
+                        Entrar com SUAP
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-6xl w-full mx-auto p-6">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 text-center py-4 text-sm mt-10">
+        &copy; 2026 - Integração SUAP com Flask & Authlib.
+    </footer>
+
+</body>
+</html>

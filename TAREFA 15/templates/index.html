@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Bem-vindo - SUAP Flask{% endblock %}
+
+{% block content %}
+<div class="text-center py-16 bg-white rounded-2xl shadow-sm border border-gray-100 max-w-2xl mx-auto my-10">
+    <div class="text-6xl mb-4">🎓</div>
+    <h1 class="text-3xl font-extrabold text-gray-800 mb-2">Bem-vindo ao Dashboard Escolar</h1>
+    <p class="text-gray-500 mb-8 px-6">
+        Para visualizar suas notas, informações de boletim e dados cadastrais do IFRN, realize o login seguro utilizando suas credenciais do SUAP.
+    </p>
+    <a href="{{ url_for('login') }}" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
+        Autenticar com o SUAP
+    </a>
+</div>
+{% endblock %}
