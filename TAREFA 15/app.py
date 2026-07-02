@@ -1,7 +1,6 @@
 from flask import Flask, redirect, url_for, session, request, render_template
 from authlib.integrations.flask_client import OAuth
 from dotenv import load_dotenv
-from datetime import datetime
 import os
 
 load_dotenv()
@@ -11,6 +10,11 @@ app.secret_key = "development"
 
 oauth = OAuth(app)
 
+
+def fetch_suap_token():
+    return session.get('suap_token')
+
+
 oauth.register(
     name='suap',
     client_id=os.getenv("CLIENT_ID"),
@@ -18,14 +22,10 @@ oauth.register(
     api_base_url='https://suap.ifrn.edu.br/api/',
     access_token_url='https://suap.ifrn.edu.br/o/token/',
     authorize_url='https://suap.ifrn.edu.br/o/authorize/',
+    fetch_token=fetch_suap_token  
 )
 
-@app.before_request
-def set_token():
-    if "suap_token" in session:
-        oauth.suap.token = session["suap_token"]
 
-# 🔐 LOGIN TOKEN
 @app.route('/login')
 def login():
     redirect_uri = url_for('auth', _external=True)
@@ -45,61 +45,54 @@ def logout():
     return redirect(url_for('index'))
 
 
-# 🔧 USUÁRIO
 def get_usuario():
     resposta = oauth.suap.get('rh/meus-dados')
     return resposta.json()
 
 
-# 🔧 BOLETIM
+
 def get_boletim(ano, periodo):
-
     url = f"ensino/meu-boletim/{ano}/{periodo}/"
-
     resposta = oauth.suap.get(url)
-
     return resposta.json().get("results", [])
 
 
-# 🏠 HOME
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
 
-# 👤 PERFIL
+
 @app.route('/perfil')
 def perfil():
-
     if 'suap_token' not in session:
         return redirect(url_for('index'))
 
     usuario = get_usuario()
-
     return render_template(
         'user.html',
         user_data=usuario
     )
 
 
-# 📚 BOLETIM
 @app.route('/boletim')
 def boletim():
-
     if 'suap_token' not in session:
         return redirect(url_for('index'))
 
     usuario = get_usuario()
-
-    ano = request.args.get("ano", 2024)
-    periodo = request.args.get("periodo", 1)
+    ano = request.args.get("ano", "2026")
+    periodo = request.args.get("periodo", "1")
 
     dados = get_boletim(ano, periodo)
 
     return render_template(
         "boletim.html",
         user_data=usuario,
-        boletim=dados
+        boletim=dados,
+        ano_selecionado=int(ano),       
+        periodo_selecionado=int(periodo) 
     )
 
 if __name__ == "__main__":

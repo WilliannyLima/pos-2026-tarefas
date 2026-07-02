@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Boletim{% endblock %}
+
+{% block content %}
+
+<div class="d-flex align-items-center mb-4 p-3 bg-white rounded shadow-sm">
+    <img src="{{ user_data['url_foto_150x200'] }}" alt="Avatar" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+    <div>
+        <h5 class="mb-0">{{ user_data['nome_usual'] }}</h5>
+        <small class="text-muted">Matrícula: {{ user_data['matricula'] }}</small>
+    </div>
+</div>
+
+<div class="card shadow p-4">
+
+<div class="card shadow p-4">
+    <div class="d-flex align-items-center mb-4">
+        <h3 class="mb-0">📚 Boletim Escolar</h3>
+    </div>
+   
+    <form method="GET" action="/boletim" class="row g-3 mb-4">
+        <div class="col-md-4">
+    <label class="form-label fw-bold">Selecione o Ano</label>
+    <select name="ano" class="form-select">
+        <option value="2023" {% if ano_selecionado == 2023 %}selected{% endif %}>2023</option>
+        <option value="2024" {% if ano_selecionado == 2024 %}selected{% endif %}>2024</option>
+        <option value="2025" {% if ano_selecionado == 2025 %}selected{% endif %}>2025</option>
+        <option value="2026" {% if ano_selecionado == 2026 %}selected{% endif %}>2026</option>
+    </select>
+</div>
+
+        <div class="col-md-4">
+            <label class="form-label fw-bold">Período Letivo</label>
+            <select name="periodo" class="form-select">
+                <option value="1" {% if periodo_selecionado == 1 %}selected{% endif %}>1</option>
+                <option value="2" {% if periodo_selecionado == 2 %}selected{% endif %}>2</option>
+                <option value="3" {% if periodo_selecionado == 3 %}selected{% endif %}>3</option>
+                <option value="4" {% if periodo_selecionado == 4 %}selected{% endif %}>4</option>
+            </select>
+        </div>
+
+        <div class="col-md-4 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100 fw-bold">🔍 Filtrar Ano</button>
+        </div>
+    </form>
+
+    <div class="table-responsive">
+        <table class="table table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>Disciplina</th>
+                    <th class="text-center">Média</th>
+                    <th class="text-center">Faltas</th>
+                    <th class="text-center">Situação</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% if boletim %}
+                {% for d in boletim %}
+                <tr>
+                    <td class="fw-semibold">{{ d['disciplina'] }}</td>
+                    <td class="text-center">
+                        <span class="badge {% if d['media_disciplina']|float >= 60 %}bg-success{% else %}bg-danger{% endif %} fs-6">
+                            {{ d['media_disciplina'] }}
+                        </span>
+                    </td>
+                    <td class="text-center">{{ d['numero_faltas'] }}</td>
+                    <td class="text-center">
+                        <span class="badge {% if d['situacao'] == 'Aprovado' %}bg-success-subtle text-success{% else %}bg-warning-subtle text-warning{% endif %} px-3 py-2">
+                            {{ d['situacao'] }}
+                        </span>
+                    </td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="4" class="text-center text-muted py-4">
+                        Nenhum registro encontrado para o ano letivo selecionado.
+                    </td>
+                </tr>
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
